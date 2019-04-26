@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Counting occurrence of a word</title>
+</head>
+<body>
+
+   <div style="margin-left: 650px;margin-top: 300px">
+    	<button onclick = "findWord();">Click!</button>
+      <p id = "displayWord">
+      </p>
+	</div>
+
+	<script type="text/javascript">
+		       
+           function findWord() {
+              var str = prompt("Enter a string!");
+              var s = prompt("Enter a word to be searched!")
+
+              //Finding the word and keeping count
+              var splitStr = str.toLowerCase().split(' ');
+              var word;
+              var counter = 0;
+              for (var i = 0; i < splitStr.length; i++) {
+                  word = splitStr[i];
+                  if(word == s)
+                     counter++;  
+              }
+              
+             //Displaying the word and keeping count
+             document.getElementById('displayWord').innerHTML = (s + " was found " + counter + " times");
+           }
+           
+	</script>
+
+</body>
+</html>

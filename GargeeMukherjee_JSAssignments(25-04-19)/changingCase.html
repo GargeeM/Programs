@@ -1,0 +1,34 @@
+<!-- Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word of the string in upper case. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+     
+    <div style="margin-left: 650px;margin-top: 300px">
+    	<button onclick = "changingCase();">Click!</button>
+      <p id = "displayString">
+      </p>
+	</div>
+
+	<script type="text/javascript">
+		       
+           function changingCase() {
+              var str = prompt("Enter a string!");
+
+              //Converting first letters to Upper Case
+              var splitStr = str.split(' ');
+              for (var i = 0; i < splitStr.length; i++) {
+              splitStr[i] = splitStr[i].charAt(0).toUpperCase() + splitStr[i].substring(1);     
+              }
+
+             //Joining the string and displaying
+             var s = splitStr.join(' ');
+             document.getElementById('displayString').innerHTML = s;
+           }
+
+	</script>
+
+</body>
+</html>

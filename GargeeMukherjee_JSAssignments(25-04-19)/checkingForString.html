@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checking For String Variable</title>
+</head>
+<body>
+
+	<div style="margin-left: 650px;margin-top: 300px">
+       
+        <br><br>
+    	<p id = showResult>
+    	</p>
+    </div>
+            
+    <script type="text/javascript">
+    	function checkingForString(element){
+           //logic to check if variable is String
+           if (typeof(element) == "string")
+               document.getElementById('showResult').innerHTML += ("It is a String!!" + "<br>");
+           else
+           	   document.getElementById('showResult').innerHTML += ("It is not a String!!");
+    	}
+
+       //checking the function
+       checkingForString("Hello");
+       checkingForString(1234);
+
+	 
+
+    </script>
+</body>
+</html>

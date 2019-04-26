@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+     
+    <div style="margin-left: 650px;margin-top: 300px">
+    	<button onclick = "mergeArrays();">Click!</button>
+      <p id = "displayNonRepeat">
+      </p>
+	</div>
+
+	<script type="text/javascript">
+		       
+           function mergeArrays() {
+              var array1 = [];
+              var array2 = [];
+
+              //accepting two arrays with pre-defined size from the user
+               for (var i = 0; i < 5; i++) {
+                 array1[i] = prompt("Enter elements of the first array:");
+               }
+               for (var j = 0; j < 5; j++) {
+                 array2[j] = prompt("Enter elements of the second array:");
+               }
+
+               //merging two arrays 
+               var array = [];
+               array = array1.concat(array2);
+               console.log(array);
+
+               //removing duplicate data
+               var count = 0;
+               var num = [];
+               for (var k = 0; k < array.length; k++) {
+                 num = array[k];
+                 for (var l = k+1; l < array.length; l++) {
+                    if (num == array[l]) 
+                      
+                      array.splice(l--,1)       
+                 }
+               
+               //displaying final array
+               console.log(array);
+               document.getElementById('display').innerHTML = array;
+
+             }
+
+           }       
+
+	</script>
+         
+         <p id = "display">
+         </p>
+</body>
+</html>

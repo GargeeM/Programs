@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body onload = "getBoldWords();">
+
+	<div style="margin-left: 700px;margin-top: 300px">
+      <button onclick="showHighlight();">Click to highlight!</button>
+      <br>
+      <p id = 'display'>
+      	We’re <strong>celebrating</strong> 7 years of <strong>learners</strong> and <strong>educators</strong> coming together to spread <strong>knowledge</strong> and transform lives. Join the <strong>celebration</strong> and start one of these <strong>all-time</strong> most popular courses and <strong>Specializations!</strong>
+      </p>
+    </div>
+
+	<script type="text/javascript">
+		var bold;
+        //window.onload = getBold_items();
+ 
+        //Collect all bold words
+        function getBoldWords() { 
+          boldWords = document.getElementsByTagName('strong');  
+        }
+        //Highlighting the bold words 
+        function showHighlight() {
+           for (var i=0; i<boldWords.length; i++)
+           {                                                    
+             boldWords[i].style.color = "yellow";
+           }
+        }
+	</script>
+
+</body>
+</html>

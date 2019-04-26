@@ -1,0 +1,38 @@
+<!-- Write a JavaScript function which accepts an argument and returns the type of that argument -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+     
+    <div style="margin-left: 650px;margin-top: 300px">
+      
+      <p id = "displayType">
+      </p>
+	</div>
+
+	<script type="text/javascript">
+		       
+           function findArgumentType(element) {
+           	  //condition for checking argument type
+              if (typeof(element) == "string")
+               document.getElementById('displayType').innerHTML += ("It is a String!!" + "<br>");
+              if (typeof(element) == "number")
+           	   document.getElementById('displayType').innerHTML += ("It is a Number!!" + "<br>");
+           	  if (typeof(element) == "boolean")
+           	   document.getElementById('displayType').innerHTML += ("It is a Boolean!!" + "<br>");
+    	}
+
+       //checking the function
+       findArgumentType("Hello");
+       findArgumentType(1234);
+       findArgumentType(true);
+
+              
+       
+           
+	</script>
+
+</body>
+</html>

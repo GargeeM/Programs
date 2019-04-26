@@ -1,0 +1,35 @@
+<!-- Write a JavaScript function that accepts a string as a parameter and find the longest word within the string. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+     
+    <div style="margin-left: 650px;margin-top: 300px">
+    	<button onclick = "findLongestWord();">Click!</button>
+      <p id = "displayString">
+      </p>
+	</div>
+
+	<script type="text/javascript">
+		       
+           function findLongestWord() {
+              var str = prompt("Enter a string!");
+
+              //Finding the longest word
+              var splitStr = str.split(' ');
+              var word = splitStr[0];
+              for (var i = 0; i < splitStr.length; i++) {
+                 if (word.length < splitStr[i].length) 
+                     word = splitStr[i];     
+              }
+
+             //Displaying the longest word
+             document.getElementById('displayString').innerHTML = word;
+           }
+           
+	</script>
+
+</body>
+</html>

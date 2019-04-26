@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checking case of a character at given index</title>
+</head>
+<body>
+   
+    <div style="margin-left: 700px;margin-top: 300px">
+      <button onclick="checkUpperCaseString();">Click to check case of a character!</button>
+      <br>
+      <p id = 'display'>
+      </p>
+    </div>
+
+   <script type="text/javascript">
+   	
+    function checkUpperCaseString() {
+    	var str = prompt("Enter a string!");
+        var index = prompt("Enter index to be searched!");
+        var strSplit = str.split('');
+       
+        //checking condition for Upper Case
+    	if (strSplit[index] == strSplit[index].toUpperCase())
+           document.getElementById('display').innerHTML =  ('Character at index ' + index + ' is in Upper Case!');
+        else
+           document.getElementById('display').innerHTML =  ('Character at index ' + index + ' is not in Upper Case!');
+           
+    }
+   </script>
+
+
+
+</body>
+</html>

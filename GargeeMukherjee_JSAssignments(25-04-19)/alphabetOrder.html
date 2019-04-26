@@ -1,0 +1,27 @@
+<!-- Write a JavaScript function that returns a passed string with letters in alphabetical order. -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+     
+    <div style="margin-left: 650px;margin-top: 300px">
+    	<button onclick = "alphabet_order();">Click!</button>
+	</div>
+
+	<script type="text/javascript">
+		
+          function alphabet_order()
+          {
+             var str = prompt("Enter a string");
+             var s= str.split('').sort().join('');
+             alert(s);
+          }
+          
+
+
+	</script>
+
+</body>
+</html>

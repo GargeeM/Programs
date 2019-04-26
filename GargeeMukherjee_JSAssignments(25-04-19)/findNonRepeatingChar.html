@@ -1,0 +1,43 @@
+<!-- Write a JavaScript function that finds the not repeating character in a passed in string -->
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+     
+    <div style="margin-left: 650px;margin-top: 300px">
+    	<button onclick = "findLeastRepeatingChar();">Click!</button>
+      <p id = "displayNonRepeat">
+      </p>
+	</div>
+
+	<script type="text/javascript">
+		       
+           function findLeastRepeatingChar() {
+              var str = prompt("Enter a string!");
+
+              //Finding the longest word
+
+              var splitStr = str.split('');
+              var character;
+              
+              var counter = 0;
+              for (var i = 0; i < splitStr.length; i++) {
+                  character = splitStr[i];
+                  
+                  for (var j = 0; j < splitStr.length; j++) {
+                     if(character == splitStr[j])
+                      counter++;
+                  }
+                  console.log(counter);
+                  if (counter < 2)
+                      document.getElementById('displayNonRepeat').innerHTML += ("<br>" + character); 
+                  counter = 0;                 
+              }
+           }
+           
+	</script>
+
+</body>
+</html>

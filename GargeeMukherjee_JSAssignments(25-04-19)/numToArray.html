@@ -1,0 +1,40 @@
+<!-- Write a JavaScript program to converts a specified number to an array of digits. --> 
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+     
+    <div style="margin-left: 650px;margin-top: 300px">
+    	<button onclick = "numToArray();">Click to start!</button>
+
+      <p id = "showArray">
+      </p>
+	</div>
+
+	<script type="text/javascript">
+		
+          function numToArray(){
+
+          	var num = prompt("Enter a number!");
+            var ar = [];
+            n = num.length;
+
+            // Logic to store the digits of the number in an array
+            for (var i = n; i > 0; i--) {
+              ar[i-1] = Math.floor(num % 10);
+              num = Math.floor(num / 10);
+            }
+            
+            //displaying the digits of the number from an array
+            for (var j = 0; j < ar.length; j++) {
+              document.getElementById('showArray').innerHTML += ("<br>" + ar[j]);      
+            }
+            
+          }
+
+	</script>
+
+</body>
+</html>

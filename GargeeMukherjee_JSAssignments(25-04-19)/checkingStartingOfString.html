@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Checking start of a String</title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		function startsWith(){
+			var str = prompt("Enter a string!");
+			var s = prompt("Enter the string to be checked with");
+
+			//condition to check the beginning of the string
+			if(str.startsWith(s) == true)
+               document.getElementById('display').innerHTML =  ('Given string starts with ' + s);
+            else
+               document.getElementById('display').innerHTML =  ('Given string does not start with ' + s);
+		}
+	</script>
+
+    <div style="margin-left: 700px;margin-top: 300px">
+      <button onclick="startsWith();">Click to check!</button>
+      <br>
+      <p id = 'display'>
+      </p>
+    </div>
+</body>
+</html>
