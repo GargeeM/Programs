@@ -1,0 +1,40 @@
+<!-- 7. Take a value from user and remove the option from combo dropdown with that value -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Removing Dropdown Option</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <br>
+  <div class="text-center">
+  	<button onclick="removeDropdownOption();" class="btn btn-primary">Click to delete the below dropdown options!</button>
+  	<br><br>
+	<select id="dropDown" class = "browser-default custom-select">
+     <option>Apple</option>
+     <option>Cars</option>
+     <option>Honda</option>
+     <option>Fiat</option>
+     <option>Indigo</option>                    
+    </select>
+  </div>
+
+  <script type="text/javascript">
+  	
+      function removeDropdownOption() {
+      	var delOption = prompt("Enter the number of option from the dropdown to remove it!")
+      	
+      	//deleting the chosen option
+        document.getElementById('dropDown').remove(delOption-1);
+      }      	
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+ <div style="margin-left: 600px;margin-top: 300px">
+  <button id = "bt" class = "btn btn-primary" >Click to add Content!</button>
+  <br><br>
+  <p id="para">Your content will be appended below:</p>
+ </div>
+
+
+  <script type="text/javascript">
+
+  	$(document).ready(function(){
+			$('#bt').click(function(event){
+			var content = prompt("Enter content to append!");
+			$('#para').append("<br>" + content);
+			})
+		});
+
+
+  	  
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!-- 4. Remove all the options of a select box on a button click and then add one option and select it. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Removing options of a Select Box</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+	<div>
+		<button id = "btn" class = "btn btn-primary" style="margin-left: 600px;margin-top: 100px">Click to delete the Select Options and add new option!</button>
+		<br><br>
+	  <div style="max-width: 600px;margin-left: 500px">
+		<select id = "selectOpt" class = "browser-default custom-select">
+			<option>Physics</option>
+			<option>Biology</option>
+			<option>Chemistry</option>
+		</select>
+	  </div>
+	</div>
+
+	<script type="text/javascript">
+		 $(document).ready(function() {
+		 	$('#btn').click(function(event) {
+		 		//var opt = prompt("Enter new option to be added!");
+
+		 		//removing the options and adding new option
+		 		$('#selectOpt option').remove();
+		 		$('#selectOpt').html('<option selected = "selected">Mathematics</option>');
+		 	});
+		 	
+		 });
+	</script>
+
+</body>
+</html>

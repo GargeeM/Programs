@@ -1,0 +1,40 @@
+<!-- 2. Take a prompt input from user and replace the body content with new data -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+   <div>>
+	<button class = "btn btn-primary" onclick="changeContent();" style="margin-left: 600px;margin-top: 300px">Click to change the content of the below paragraph!</button>
+    <br><br>
+    <blockquote class = "blockquote text-center">    
+       <p id = "content">
+       The content of this paragraph will be changed depending on what you provide as input!<br>
+       We will achieve this using Javascript DOM.
+       </p>
+    </blockquote>
+   </div>
+
+   <script type="text/javascript">
+   	
+       function changeContent(){
+          //Taking inpuut from user
+          var altContent = prompt("Enter the content you want to display on screen!");
+          
+          //changing the content of the paragraph and displaying
+          document.getElementById('content').innerHTML = altContent;
+       }
+
+   </script>
+
+</body>
+</html>

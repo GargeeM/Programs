@@ -1,0 +1,62 @@
+<!-- 1. Fetch the last modified date and time of current document -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cover Page</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		.container{
+			max-width: 42em;
+			
+		}
+		.active{
+			border-bottom: 2px solid #fff;
+		}
+	</style>
+</head>
+<body class="bg-dark">
+
+  	<nav class="navbar fixed-top">
+           <a class="navbar-brand text-white" style="margin-left:200px" href="#">Cover</a>
+           <div class="form-inline my-2 my-lg-0">
+            <a class="active text-white" style="margin-right:20px" href="#">Home</a>
+            <a class="text-white" style="margin-right:20px" href="#">Features</a>
+            <a class="text-white" style="margin-right:200px" href="#">Contact</a>
+            
+           </div>
+
+       </nav>
+    <div class="jumbotron bg-dark">
+    	<div class="container">
+    		<br><br><br><br><br>
+    	<h1 class="display-4 text-white" style="margin-left: 120px">Cover your page.</h1>
+    	<br>
+    	<blockquote class="blockquote text-center text-white">
+               <p>The most important moment of your life is now. The most important person in your life is the one you are with now, and the most important activity in your life is the one you are involved with now.</p>
+        </blockquote>
+        <button onclick = "displayLastModifiedDateTime();" type="button" class="btn btn-light btn-lg" style="margin-left: 250px">Learn more</button>
+    	</div>
+    </div>
+
+    <nav class="navbar fixed-bottom">
+  <a class="navbar-brand text-white" style="margin-left: 600px" href="#">Cover template for Bootstrap, by @mdo</a>
+</nav>
+
+<script type="text/javascript">
+   function displayLastModifiedDateTime(){
+    alert("This document was last modified on:  " + document.lastModified);
+   }
+</script>
+
+<!-- jQuery library -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>

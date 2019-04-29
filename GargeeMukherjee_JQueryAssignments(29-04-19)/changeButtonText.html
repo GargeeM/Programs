@@ -1,0 +1,34 @@
+<!-- 7. Change button text on click -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing Button Text OnClick</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+	<button class="btn btn-primary" style="margin-left: 700px;margin-top: 300px">Click to change the text of this button!</button>
+
+	<script type="text/javascript">
+		
+		$(document).ready(function() {
+			$('button').click(function(event) {
+				//taking alternate text as input from user
+				var altText = prompt("Enter desired text!");
+				
+				//changing button text
+				$('button').html(altText);
+			});
+		});
+	</script>
+
+</body>
+</html>

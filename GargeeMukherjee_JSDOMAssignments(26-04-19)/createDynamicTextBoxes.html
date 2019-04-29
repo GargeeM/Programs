@@ -1,0 +1,41 @@
+<!-- 6.Take input from user and create n number of text boxes dynamically -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+
+<script type="text/javascript">
+
+	function createDdynamicTextBoxes(){
+	  //getting the required no. of textboxes from the user
+      var totalNo = prompt("Enter the desired number of Textboxes!");
+      var textBox = document.getElementById("textBoxes");
+
+      //creating textboxes using a for loop
+      for(var i = 1;i <= totalNo;i++){
+         textBox.innerHTML  = textBox.innerHTML  +'TextBox '+ i +'  <input type="text" class = "form-control"> <br> \n';
+      }
+
+    }
+
+</script>
+
+
+  <div style="margin-left: 650px;margin-top: 10px">
+   <button onclick="createDdynamicTextBoxes();" class="btn btn-primary">Click to create Textbox!</button>
+  </div>
+  <div id="textBoxes" style = "width: 500px;margin-left: 500px">
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!-- 8. Set the value in an empty span using jQuery -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Setting value in an empty span</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <br><br>
+	<div class = "text-center">
+		<button class="btn btn-primary">Click to set value in the empty span!</button><br><br>
+		There is a span between this line<br>
+		<span></span>
+		<br>And this line!
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$('button').click(function(event) {
+				//taking content for span as input from user
+				var content = prompt("Enter some content for the span!");
+
+				//displaying the content in the span
+				$('span').html(content);
+			});
+		});
+	</script>
+
+</body>
+</html>

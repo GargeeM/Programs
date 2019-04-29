@@ -1,0 +1,40 @@
+<!-- Remove all css associated with a particular <div> on mouse click -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Remove all CSS of a div</title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+	<div style = "margin-top: 150px">
+		<h5 style ="margin-left: 550px">Click on any div below to remove their respective CSS</h5><br>
+		<div style = "color : red">
+			This is one div.
+		</div>
+		<br><br>
+		<div style = "color : yellow;background-color: blue">
+			This is another div.
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('div').click(function(event) {
+				//removing style attributes of the clicked div
+				$(this).removeAttr('style');
+			});
+			
+		});
+	</script>
+
+</body>
+</html>

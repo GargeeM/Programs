@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  
+  <div style="margin-left: 600px;margin-top: 300px">
+	<button class = "btn btn-primary" onclick="displayLastLinkAttr();">Click to view the attributes of the last Link!</button>
+	<br><br>
+	<a id = "link1" href="www.google.com" class = "text-center">First Link</a>
+	<br>
+	<a id = "link2" href="https://getbootstrap.com/" class = "text-center">Second Link</a>
+  </div>
+    <br>
+  	<p id = "displayLink" class = "text-center">
+  	</p>
+  
+	<script type="text/javascript">
+		
+       function displayLastLinkAttr(){
+
+             var link = document.getElementById('link2').href;
+             document.getElementById('displayLink').innerHTML = link;
+
+
+       }
+
+	</script>
+
+</body>
+</html>
