@@ -1,0 +1,46 @@
+<!-- 6. Count the number of options within a combo select box. -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Count options of a Combo Select Box</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+   <br><br>
+   <div class="text-center">
+   	 <select id = "selectBox">
+   	 	<option>Summer</option>
+   	 	<option>Winter</option>
+   	 	<option>Spring</option>
+   	 	<option>Autumn</option>
+   	 	<option>Monsoon</option>
+   	 </select>
+   	 <br><br>
+   	 <div id="myDiv">
+   	 	
+   	 </div>
+   	 <br><br>
+   	 <button class="btn btn-danger">Click to count options!</button>
+   	 
+   </div>
+   
+   <script type="text/javascript">
+   	
+         $(document).ready(function() {
+         	$('button').click(function(event) {
+                
+                $('#myDiv').html($('#selectBox option').length);
+         	});
+         });
+
+   </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- 1. Remove all spans from the html dom  -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Removing all spans from the document</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+</head>
+<body>
+
+	<div class="text-center">
+		<br><br>
+		<button class="btn btn-primary">Click to vanish spans!</button><br><br>
+		<span>This is one span</span><br>
+		<span>and I'm another span</span><br>
+		<span>Spans are useless</span>
+	</div>
+
+	<script type="text/javascript">
+		
+        $(document).ready(function() {
+        	
+           $('button').click(function(event) {
+           	 $('span').remove();
+           });
+
+        });
+
+	</script>
+
+</body>
+</html>

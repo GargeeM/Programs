@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Moving element from one div to another</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+
+	<div class="text-center">
+		<br>
+		<button class="btn btn-primary">Click to shift elements from one div to another</button>
+		<br><br>
+		<div id="firstDiv" style="background-color: blue"><p>I can move to the next div!</p></div><br>
+		<div id="secondDiv" style="background-color: yellow"></div>
+	</div>
+    
+    <script type="text/javascript">
+    	  
+        $(document).ready(function() {
+        	$('button').click(function(event) {
+        		//appending elements of firstdiv to secondDiv
+        		$('#firstDiv p').appendTo('#secondDiv');
+        	});
+        });
+
+    </script>
+
+</body>
+</html>

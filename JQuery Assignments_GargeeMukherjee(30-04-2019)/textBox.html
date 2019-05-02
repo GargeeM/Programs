@@ -1,0 +1,41 @@
+<!-- 2. Limit character input in the textarea to 20 characters. Also the number of characters should get updated at the bottom while typing in the text. -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+  
+  <div class = "text-align">
+	<input id = "box" type="text" name="textbox" placeholder="Enter your name">
+	<br><br>
+	<textarea></textarea>
+  </div>
+
+	<script type="text/javascript">
+		$('#box').keyup(function(event) {
+
+			if(this.value.length > 20){
+				alert("You have exceeded the limit");
+				box.focus();
+			}
+
+			else
+				$('textarea').html((20 - this.value.length) + " characters left")
+
+			
+		});
+		
+	</script>
+
+</body>
+</html>

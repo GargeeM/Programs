@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>More JQuery Stuff</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Starting with Bootstrap</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+<body>
+<!-- <button class="hButton">Hide</button>
+<button class="sButton">Display</button> -->
+
+<div class="textContainer text-center" style="border: 1px solid #000; background-color: #000; padding: 50px;">
+	<button class="mButton btn btn-primary">Click to animate!</button>
+</div>
+<div class="moreTextContainer" style="border: 1px solid #000; background-color: blue;opacity: 0;margin-left: 750px;margin-top: 250px;padding: 10px;  width: 100px; height: 80px;">
+	
+</div>
+<script type="text/javascript">
+	$(document).ready(function() {
+		
+		$(".mButton").click(function() {
+			// $(".moreTextContainer").animate({left: '100px'}, 'slow');
+			// $(".moreTextContainer").animate({height: '200px', width: '300px'}, 5000);
+			// $(".moreTextContainer").animate({height: 'toggle'}, 5000);
+
+			//Using animate with a queue
+			//$(".moreTextContainer").animate({height: '200px'}, 'slow');
+			//$(".moreTextContainer").animate({opacity: '0.2'}, 'slow');
+			//$(".moreTextContainer").animate({width: '200px'}, 'slow');
+			//$(".moreTextContainer").animate({height: '80px'}, 'slow');
+			//$(".moreTextContainer").animate({opacity: '1'}, 'slow');
+			//$(".moreTextContainer").animate({width: '100px'}, 'slow');
+
+            $(".moreTextContainer").animate({opacity: '1'}, 3000);
+			$(".moreTextContainer").animate({marginLeft: '0px', marginTop: '0px'}, 'slow');
+			$(".moreTextContainer").animate({marginLeft: '0px', marginTop: '565px'}, 'slow');
+			$(".moreTextContainer").animate({marginLeft: '1495px', marginTop: '565px'}, 'slow');
+			$(".moreTextContainer").animate({marginLeft: '1495px', marginTop: '0px'}, 'slow');
+			$(".moreTextContainer").animate({marginLeft: '750px', marginTop: '250px'}, 'slow');
+			$(".moreTextContainer").animate({opacity: '0'}, 3000);
+
+
+
+
+
+		});
+
+	});
+</script>
+</body>
+</html>
