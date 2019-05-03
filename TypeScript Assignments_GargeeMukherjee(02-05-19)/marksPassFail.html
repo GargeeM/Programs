@@ -1,0 +1,51 @@
+ <!-- Write a program in JS which takes marks of 3 subjects from user at runtime and then prints whether a student is passing(only once) depending upon whether s/he's passing 
+in every subject, otherwise the output should be failing(only once). (Build logic without using logical operators, nested if's - Just use the plain if blocks)(40+40+40)125
+ -->
+
+ <!DOCTYPE html>
+<html>
+<head>
+	<title>Calculating Result</title>
+</head>
+<body>
+
+   <div style="margin-left: 650px;margin-top: 300px">
+    	<button onclick = "findResult();">Click to enter marks!</button>
+      <p id = "displayResult">
+      </p>
+	</div>
+
+	<script type="text/javascript">
+		       
+           function findResult() {
+              var marks1 = prompt("Enter the marks of Subject 1:"); 
+              var marks2 = prompt("Enter the marks of Subject 2:"); 
+              var marks3 = prompt("Enter the marks of Subject 3:"); 
+              var counter = 0;
+            
+              if(parseInt(marks1) >= 40) 
+                    counter++;
+              
+              if(parseInt(marks2) >= 40) 
+                    counter++;
+              
+              if(parseInt(marks3) >= 40) 
+                    counter++;
+              
+            
+              console.log(counter);
+              
+              var sum = parseInt(marks1) + parseInt(marks2) + parseInt(marks3);
+              if(sum >= 125)
+                   counter++;
+              if(counter == 4)
+                  document.getElementById('displayResult').innerHTML = ("Passed!");
+              if(counter < 4)
+                  document.getElementById('displayResult').innerHTML = ("Failed!");
+                  
+              }
+
+	</script>
+
+</body>
+</html>
